@@ -1,0 +1,14 @@
+<div class="chat-output" id="chat-output">
+    <div class="user-message" *ngFor="let response of respIAHistory">
+        <div class="message">{{ response }}</div>
+    </div>
+    <div class="bot-message" *ngFor="let message of userMessageHistory">
+        <div class="message">{{ message }}</div>
+    </div>
+</div>
+
+<div class="chat-input">
+    <form (ngSubmit)="onSubmit($event)" id="user-input-form">
+        <input type="text" id="user-input" class="user-input" placeholder="Escribe algo.">
+    </form>
+</div>
